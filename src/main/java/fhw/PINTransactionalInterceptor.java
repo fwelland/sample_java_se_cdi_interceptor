@@ -8,7 +8,7 @@ import javax.interceptor.*;
 
 @Interceptor
 //@Transactional(Transactional.TxType.REQUIRES_NEW)
-@Priority(Interceptor.Priority.APPLICATION)  
+//@Priority(Interceptor.Priority.APPLICATION)  
 @PINTransactional
 public class PINTransactionalInterceptor
 {

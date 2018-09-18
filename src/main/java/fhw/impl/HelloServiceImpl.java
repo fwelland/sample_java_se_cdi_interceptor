@@ -2,10 +2,10 @@ package fhw.impl;
 import fhw.PINTransactional;
 import fhw.contracts.BadCodeException;
 import fhw.contracts.HelloService;
-import javax.inject.Named;
+import javax.enterprise.context.Dependent;
 
 
-@Named
+@Dependent
 public class HelloServiceImpl
         implements HelloService
 {

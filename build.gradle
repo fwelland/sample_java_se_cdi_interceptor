@@ -1,6 +1,11 @@
 plugins{
-    id 'java'
+//    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version "2.0.4"    
 }
+
+
+mainClassName = 'fhw.Driver'  
 
 repositories {
     jcenter()
@@ -24,7 +29,28 @@ jar{
   }  
 }
 
-task run(type: JavaExec, dependsOn: build ) {
-    main = "fhw.Driver"
-    classpath = sourceSets.main.runtimeClasspath    
+shadowJar{
+    mergeServiceFiles()
 }
+
+//task foober(){
+//    sourceSets.main.runtimeClasspath.each { println it}
+//}
+//
+//task run2(type: JavaExec, dependsOn: build ) {
+//    main = "fhw.Driver"
+//    classpath = sourceSets.main.runtimeClasspath    
+//}
+//
+
+
+//task runJar(dependsOn:build) << {
+//  javaexec { 
+//    main="-jar";
+//    args = [
+//            "build/libs/sample_java_se_cdi_interceptor.jar",
+//            "-c",
+//            "FrontPage?suite&format=text"
+//           ]
+//  } 
+//}

@@ -11,8 +11,8 @@ public class Driver
         
         try (SeContainer container = initializer
 //                .disableDiscovery()
-                .addPackages(true,Package.getPackage("fhw"))
-                .enableInterceptors(fhw.PINTransactionalInterceptor.class)
+//                .addPackages(true,Package.getPackage("fhw"))
+//                .enableInterceptors(fhw.PINTransactionalInterceptor.class)
                 .initialize())
         {
             

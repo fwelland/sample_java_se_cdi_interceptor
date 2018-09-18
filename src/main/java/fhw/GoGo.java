@@ -4,12 +4,10 @@ import fhw.contracts.HelloService;
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.Initialized;
-import javax.enterprise.context.control.ActivateRequestContext;
 import javax.enterprise.event.Observes;
 import javax.inject.Inject;
 
 @ApplicationScoped
-@ActivateRequestContext
 public class GoGo
 {        
     @Inject
