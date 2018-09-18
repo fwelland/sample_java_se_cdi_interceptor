@@ -9,8 +9,7 @@ What this does:
 * has a interceptor annotation around a service method
 
 
-
-## Not quite sure what is in play here there are a couple of odd things maybe was not expecting: 
+## Not quite sure what is in play here; there are a couple of odd things I was not really expecting: 
 
 * had to enableInterceptors() explicitly
 * beans.xml seem in place, but not clear WeldSE is picking up on it. 
@@ -38,9 +37,9 @@ So now I run via:
 java -jar build/libs/sample_java_se_cdi_interceptor-all.jar
 ```
 
-This behaves well and matches my expectation.    Having said that, this work was 
+This behaves well and matches my expectations.  Having said that, this work was 
 born out of a Jersey/JavaSE/CDI issue and that project was using a different packaging
-where a synthetic BDU was NOT in play.  Further in that work, Jersey-CDI2-SE was
-booting weld and there was not explicit use of SeContainer and there still seems 
-to be an issue with interceptors there. 
+where a synthetic BDU was NOT in play (or I don't think it is).  Further in that
+work, Jersey-CDI2-SE was booting weld and there was no explicit use of SeContainer
+and there still seems to be an issue with interceptors there. 
 
