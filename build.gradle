@@ -1,0 +1,30 @@
+plugins{
+    id 'java'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compileOnly 'javax.enterprise:cdi-api:2.0'
+    compile 'javax.annotation:javax.annotation-api:1.3.2'    
+    runtime 'org.jboss.weld.se:weld-se-shaded:3.0.5.Final'
+    runtime 'org.jboss:jandex:2.0.5.Final'    
+}
+
+wrapper {
+    gradleVersion = '4.10'
+}
+
+
+jar{
+  manifest{
+       attributes 'Main-Class': 'fhw.Driver'  
+  }  
+}
+
+task run(type: JavaExec, dependsOn: build ) {
+    main = "fhw.Driver"
+    classpath = sourceSets.main.runtimeClasspath    
+}
