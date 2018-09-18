@@ -9,7 +9,7 @@ What this does:
 * has a interceptor annotation around a service method
 
 
-## Not quite sure what is in play here; there are a couple of odd things I was not really expecting: 
+## Not quite sure what is in play here; there are some odd things I was not really expecting: 
 
 * had to enableInterceptors() explicitly
 * beans.xml seem in place, but not clear WeldSE is picking up on it. 
